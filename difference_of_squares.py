@@ -14,6 +14,7 @@ def sum_of_squares(count):
 
 def difference(count):
     return square_of_sum(count) - sum_of_squares(count)
+
 print(square_of_sum(1))
 print(sum_of_squares(1))
 print(difference(1))
