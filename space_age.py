@@ -18,7 +18,7 @@ class SpaceAge(object):
         self.planets_age = {k: years * v for (k, v) in PLANETS_EARTH_YEAR_LENGTH.items()}
 
     def on_mercury(self):
-       return self.planets_age['Mercury']
+        return self.planets_age['Mercury']
 
     def on_venus(self):
         return self.planets_age['Venus']
@@ -40,5 +40,3 @@ class SpaceAge(object):
 
     def on_neptune(self):
         return self.planets_age['Neptune']
-
-SpaceAge.on_neptune(71997456)
