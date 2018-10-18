@@ -5,7 +5,7 @@ def hey(phrase):
     if phrase_stripped[-1] == '?' and not phrase_stripped.isupper():
         return 'Sure.'
     if phrase_stripped[-1] == '?' and phrase_stripped.isupper():
-        return 'Calm down, I know what Im doing!'
-    if '!' in phrase_stripped and phrase_stripped.isupper():
+        return "Calm down, I know what I'm doing!"
+    if ('!' in phrase_stripped and phrase_stripped.isupper()) or phrase_stripped.isupper():
         return 'Whoa, chill out!'
     return 'Whatever.'
