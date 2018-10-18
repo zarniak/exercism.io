@@ -1,10 +1,11 @@
 def hey(phrase):
-    if phrase.isspace() or not phrase:
+    phrase_stripped = phrase.strip()
+    if phrase_stripped.isspace() or not phrase_stripped:
         return 'Fine. Be that way!'
-    if phrase.strip().find('?')+1 == len(phrase.strip()) and not phrase.isupper():
+    if phrase_stripped[-1] == '?' and not phrase_stripped.isupper():
         return 'Sure.'
-    if phrase.strip().find('?')+1 == len(phrase.strip()) and phrase.isupper():
+    if phrase_stripped[-1] == '?' and phrase_stripped.isupper():
         return 'Calm down, I know what Im doing!'
-    if phrase.strip().find('!') and phrase.isupper():
+    if '!' in phrase_stripped and phrase_stripped.isupper():
         return 'Whoa, chill out!'
     return 'Whatever.'
