@@ -1,10 +1,10 @@
 def prime_factors(natural_number):
-    list = []
+    factors = []
     x = 2
     while x <= natural_number:
-        if natural_number % x == 0:
-            list.append(x)
-            natural_number = natural_number/x
+        if not natural_number % x:
+            factors.append(x)
+            natural_number /= x
         else:
             x += 1
-    return list
+    return factors
