@@ -1,6 +1,5 @@
 def distance(strand_a, strand_b):
-    count = 0
-    for i, x in enumerate(strand_a):
-        if x != strand_b[i]:
-            count = count + 1
-    return count
+    if len(strand_a) != len(strand_b):
+        raise ValueError('a')
+    else:
+        return sum(char_1 != char_2 for char_1, char_2 in zip(strand_a, strand_b))
