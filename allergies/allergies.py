@@ -9,27 +9,34 @@ ALLERGENS = {
     128: 'cats',
 }
 
+
 class Allergies(object):
 
     def __init__(self, score):
         self.score = score
-
-    def is_allergic_to(self, item):
-        self.item = item
-        #item in allergen_list
+        self.allergen_list = self.lst
 
 #    @property
     def lst(self):
         allergen_list = []
-        score = self.score
+        score = self.score % 256
+        factors = 7
+        while factors >= 0:
+            if score >= 2**factors:
+                score -= 2**factors
+                allergen_list.insert(0, ALLERGENS.get(2**factors))
+            factors -= 1
+        return allergen_list
+
+    def is_allergic_to(self, item):
+        self.item = item
+
+        allergen_list = []
+        score = self.score % 256
         factors = 7
         while factors >= 0:
             if score >= 2**factors:
                 score -= 2**factors
                 allergen_list.append(ALLERGENS.get(2**factors))
             factors -= 1
-        return allergen_list
-        
-        
-print(Allergies(5).lst())
-print(Allergies(5).is_allergic_to('eggs'))
+        return item in allergen_list
