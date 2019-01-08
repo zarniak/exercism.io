@@ -40,5 +40,3 @@ class Allergies(object):
                 allergen_list.append(ALLERGENS.get(2**factors))
             factors -= 1
         return item in allergen_list
-
-    
