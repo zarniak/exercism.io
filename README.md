@@ -4,7 +4,7 @@ For nice links see: https://github.com/zarniak/exercism.io/wiki
 
 **Core exercices:**
 - hello-world - completed
-- two-fer - sent
+- two-fer - completed
 - hamming - sent
 
 **Side exercises:**
