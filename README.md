@@ -5,7 +5,8 @@ For nice links see: https://github.com/zarniak/exercism.io/wiki
 **Core exercices:**
 - hello-world - completed
 - two-fer - completed
-- hamming - sent
+- hamming - completed
+- acronym - in progress
 
 **Side exercises:**
 - allergies - in progress
