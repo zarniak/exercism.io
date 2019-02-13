@@ -1,4 +1,6 @@
 import re
 
+
 def abbreviate(words):
-    return re.sub('[^A-Z]', '', words.replace("'", "").title())
+    words_titled = words.replace("'", "").title()
+    return re.sub('[^A-Z]', '', words_titled)
