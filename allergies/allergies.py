@@ -20,9 +20,10 @@ class Allergies(object):
     def lst(self):
         factors = 7
         while factors >= 0:
-            if self.score >= 2**factors:
-                self.score -= 2**factors
-                self.allergen_list.insert(0, ALLERGENS.get(2**factors))
+            allergen_code = 2**factors
+            if self.score >= allergen_code:
+                self.score -= allergen_code
+                self.allergen_list.append(ALLERGENS.get(allergen_code))
             factors -= 1
         return self.allergen_list
 
